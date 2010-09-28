@@ -32,7 +32,7 @@ class String
     words.each do |word|
       word.downcase! #if word =~ /[\w]+/
       key = word.stem.intern
-      if word =~ /^\w+$/ && ! CORPUS_SKIP_WORDS.include?(word) && word.length > 2 
+      if word =~ /\A[a-z]+\z/ && ! CORPUS_SKIP_WORDS.include?(word) && word.length > 2 
         d[key] += 1
       end
     end
