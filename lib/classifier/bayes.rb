@@ -30,7 +30,7 @@ class Bayes
 		end
 	end
 
-  def categories
+  def get_categories
     @categories
   end
   def categories= categories
