@@ -30,6 +30,9 @@ class Bayes
 		end
 	end
 
+  def categories
+    @categories
+  end
 	#
 	# Provides a untraining method for all categories specified in Bayes#new
 	# Be very careful with this method.

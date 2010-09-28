@@ -31,27 +31,21 @@ class String
     d = Hash.new(0)
     words.each do |word|
       word.downcase! #if word =~ /[\w]+/
-      key = word.stem.intern
-      if word =~ /\A[a-z]+\z/ && ! CORPUS_SKIP_WORDS.include?(word) && word.length > 2 
-        d[key] += 1
+      if word =~ /\A[a-z]+\z/ && !CORPUS_SKIP_WORDS.include?(word) && word.length > 2
+        d[word.stem.intern] += 1
       end
     end
     d
   end
 
   CORPUS_SKIP_WORDS = [
-      "a",
       "again",
       "all",
       "along",
       "are",
       "also",
-      "an",
       "and",
-      "as",
-      "at",
       "but",
-      "by",
       "came",
       "can",
       "cant",
@@ -59,7 +53,6 @@ class String
       "did",
       "didn",
       "didnt",
-      "do",
       "doesnt",
       "dont",
       "ever",
@@ -70,30 +63,19 @@ class String
       "here",
       "him",
       "how",
-      "i",
-      "if",
-      "in",
       "into",
-      "is",
       "isnt",
-      "it",
       "itll",
       "just",
       "last",
       "least",
       "like",
       "most",
-      "my",
       "new",
-      "no",
       "not",
       "now",
-      "of",
-      "on",
-      "or",
       "should",
       "sinc",
-      "so",
       "some",
       "th",
       "than",
@@ -103,14 +85,12 @@ class String
       "their",
       "then",
       "those",
-      "to",
       "told",
       "too",
       "true",
       "try",
       "until",
       "url",
-      "us",
       "were",
       "when",
       "whether",
