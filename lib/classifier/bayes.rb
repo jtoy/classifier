@@ -35,7 +35,6 @@ class Bayes
   end
   def categories= categories
     @categories = categories
-    @total_words = @categories.inject(0){|sum, c{|c| sum += c.inject(0){|sumsum,w| sumsum += @categories[c][w] ;sumsum}};sum }
   end
 	#
 	# Provides a untraining method for all categories specified in Bayes#new
