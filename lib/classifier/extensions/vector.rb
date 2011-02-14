@@ -7,7 +7,7 @@ require 'matrix'
 require 'mathn'
 
 class Array
-  def sum(identity = 0, &block)
+  def oldsum(identity = 0, &block)
     return identity unless size > 0
   
     if block_given?
