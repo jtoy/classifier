@@ -10,8 +10,8 @@ begin
    $GSL = true
    
 rescue LoadError
-	warn "Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/"
-	require 'classifier/extensions/vector'	
+  puts "Notice: for 10x faster LSI support, please install http://rb-gsl.rubyforge.org/"
+  require 'classifier/extensions/vector'	
 end
    
 require 'classifier/lsi/word_list'
